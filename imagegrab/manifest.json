@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "图提取 ImageGrab",
+  "version": "1.0.0",
+  "description": "提取淘宝、京东、拼多多商家版商品图片，集中预览并转换为 PNG 下载。",
+  "permissions": ["activeTab", "scripting", "downloads", "storage"],
+  "host_permissions": ["https://*.taobao.com/*", "https://*.tmall.com/*", "https://*.jd.com/*", "https://*.pinduoduo.com/*", "https://*.yangkeduo.com/*", "https://*.alicdn.com/*", "https://*.360buyimg.com/*", "https://*.pddpic.com/*", "https://*.pinduoduoimg.com/*", "http://localhost/*", "http://127.0.0.1/*"],
+  "optional_host_permissions": ["https://*/*", "http://*/*"],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_title": "图提取：打开图片工作台", "default_popup": "popup.html"},
+  "content_scripts": [{
+    "matches": ["https://*.taobao.com/*", "https://*.tmall.com/*", "https://*.jd.com/*", "https://*.pinduoduo.com/*", "https://*.yangkeduo.com/*", "http://localhost/*", "http://127.0.0.1/*"],
+    "js": ["extractor.js", "content.js"], "css": ["content.css"], "run_at": "document_idle"
+  }],
+  "icons": {"16": "assets/icon16.png", "48": "assets/icon48.png", "128": "assets/icon128.png"}
+}

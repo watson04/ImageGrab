@@ -1,0 +1,2 @@
+#imagegrab-button{position:fixed!important;right:28px!important;bottom:32px!important;z-index:2147483647!important;background:#5b50e6!important;color:white!important;border:0!important;border-radius:16px!important;padding:16px 24px!important;font:600 15px/1.4 "Microsoft YaHei",sans-serif!important;box-shadow:0 8px 30px #4c3fc744!important;cursor:pointer!important;transition:transform .2s!important}
+#imagegrab-button:hover{transform:translateY(-3px)!important}#imagegrab-button:disabled{opacity:.7!important;cursor:wait!important}
